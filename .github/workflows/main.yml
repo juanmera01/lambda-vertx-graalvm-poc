@@ -18,3 +18,8 @@ jobs:
           native-image --version
       - name: Example step using Maven plugin  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
         run: mvn clean package
+      - name: Upload binary
+        uses: actions/upload-artifact@v2
+        with:
+          name: lambda
+          path: /
