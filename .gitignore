@@ -1,0 +1,15 @@
+# build files
+target
+build
+lib_managed
+# runtime files
+node_modules
+.vertx
+# ide
+.classpath
+.project
+.idea
+.vscode
+*.iml
+# AWS
+function.zip
