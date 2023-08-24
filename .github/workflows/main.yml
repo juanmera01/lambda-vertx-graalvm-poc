@@ -18,8 +18,13 @@ jobs:
           native-image --version
       - name: maven build and image creation  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
         run: mvn clean package
-      - name: Upload lambda binary and zip
+      - name: Upload lambda binary
         uses: actions/upload-artifact@v2
         with:
           name: lambda
           path: target/lambda*
+      - name: Upload zip
+        uses: actions/upload-artifact@v2
+        with:
+          name: lambda.zip
+          path: target/lambda.zip
