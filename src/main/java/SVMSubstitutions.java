@@ -59,3 +59,11 @@ final class TargetResolverProvider {
     return new DefaultResolverProvider();
   }
 }
+
+@TargetClass(className = "com.google.protobuf.UnsafeUtil")
+final class Target_com_google_protobuf_UnsafeUtil {
+  @Substitute
+  static sun.misc.Unsafe getUnsafe() {
+    return null;
+  }
+}
