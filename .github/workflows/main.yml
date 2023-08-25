@@ -18,8 +18,8 @@ jobs:
           native-image --version
           sudo apt-get install zlib1g-dev
           gcc -v
-          sudo apt-get install glibc-devel
-          sudo apt-get install zlib-devel
+          sudo apt-get install build-essential
+          ldd --version
       - name: maven build and image creation  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
         run: mvn clean package
       - name: Upload lambda binary
