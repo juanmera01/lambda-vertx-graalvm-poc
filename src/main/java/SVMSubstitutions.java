@@ -38,6 +38,15 @@ final class TargetPlatformDependent0 {
   private static long ADDRESS_FIELD_OFFSET;
 }
 
+/**
+ * This substitution allows the usage of platform specific code to do low level buffer related tasks
+ */
+@TargetClass(className = "io.netty.util.internal.shaded.org.jctools.util.UnsafeRefArrayAccess")
+final class TargetUnsafeRefArrayAccess {
+  @Alias
+  @RecomputeFieldValue(kind = RecomputeFieldValue.Kind.ArrayIndexShift, declClass = Object[].class)
+  public static int REF_ELEMENT_SHIFT;
+}
 
 /**
  * This substitution forces the usage of the blocking DNS resolver
