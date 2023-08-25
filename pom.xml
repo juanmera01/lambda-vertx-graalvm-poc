@@ -103,6 +103,7 @@
           <skip>false</skip>
           <imageName>lambda</imageName>
           <buildArgs>
+            --link-at-build-time
             --no-fallback
             --report-unsupported-elements-at-runtime
           </buildArgs>
