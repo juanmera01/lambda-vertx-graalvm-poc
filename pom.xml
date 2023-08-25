@@ -103,6 +103,8 @@
           <skip>false</skip>
           <imageName>lambda</imageName>
           <buildArgs>
+            <!-- initialize-at-run-time -->
+            --delay-class-initialization-to-runtime=AbstractReferenceCountedByteBuf,AbstractReferenceCounted
             --no-fallback
             --report-unsupported-elements-at-runtime
           </buildArgs>
