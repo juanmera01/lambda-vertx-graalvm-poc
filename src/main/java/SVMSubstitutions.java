@@ -39,14 +39,12 @@ final class TargetPlatformDependent0 {
   private static long ADDRESS_FIELD_OFFSET;
 }
 
-/**
- *  Proof
- */
- @TargetClass(className = "io.netty.buffer.AbstractReferenceCountedByteBuf")
-final class Proof {
+@TargetClass(className = "io.netty.buffer.AbstractReferenceCountedByteBuf")
+final class AbstractReferenceCountedByteBufSubstitution {
   @Alias
   @RecomputeFieldValue(kind = RecomputeFieldValue.Kind.FieldOffset, declClassName = "sun.misc.Unsafe", name = "theUnsafe")
-  private static Unsafe UNSAFE_ALIAS;
+  private static long CALCULATED_FIELD_OFFSET;
+
 }
 
 /**
