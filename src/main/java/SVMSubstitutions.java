@@ -32,20 +32,23 @@ final class TargetCleanerJava6 {
 /**
  * This substitution allows the usage of platform specific code to do low level buffer related tasks
  */
-@TargetClass(className = "io.netty.util.internal.PlatformDependent0")
+/*@TargetClass(className = "io.netty.util.internal.PlatformDependent0")
 final class TargetPlatformDependent0 {
   @Alias
   @RecomputeFieldValue(kind = RecomputeFieldValue.Kind.FieldOffset, declClassName = "java.nio.Buffer", name = "address")
   private static long ADDRESS_FIELD_OFFSET;
-}
+}*/
 
-@TargetClass(className = "io.netty.buffer.AbstractReferenceCountedByteBuf")
-final class AbstractReferenceCountedByteBufSubstitution {
+/**
+ *
+ */
+/*@TargetClass(className = "io.netty.buffer.AbstractReferenceCountedByteBuf")
+final class TargetAbstractReferenceCountedByteBuf {
   @Alias
-  @RecomputeFieldValue(kind = RecomputeFieldValue.Kind.FieldOffset, declClassName = "sun.misc.Unsafe", name = "theUnsafe")
-  private static long CALCULATED_FIELD_OFFSET;
+  @RecomputeFieldValue(kind = RecomputeFieldValue.Kind.FieldOffset, declClassName = "sun.misc.Unsafe", name = "address")
+  private static long ADDRESS_FIELD_OFFSET;
 
-}
+} */
 
 /**
  * This substitution allows the usage of platform specific code to do low level buffer related tasks
