@@ -39,6 +39,16 @@ final class TargetPlatformDependent0 {
 }
 
 /**
+ *  Proof
+ */
+@TargetClass(className = "io.netty.util.AbstractReferenceCounted")
+final class Proof {
+  @Alias
+  @RecomputeFieldValue(kind = RecomputeFieldValue.Kind.FieldOffset, declClassName = "java.nio.Buffer", name = "address")
+  private static long ADDRESS_FIELD_OFFSET;
+}
+
+/**
  * This substitution allows the usage of platform specific code to do low level buffer related tasks
  */
 @TargetClass(className = "io.netty.util.internal.shaded.org.jctools.util.UnsafeRefArrayAccess")
