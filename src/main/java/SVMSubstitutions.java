@@ -6,6 +6,7 @@ import io.vertx.core.Vertx;
 import io.vertx.core.dns.AddressResolverOptions;
 import io.vertx.core.impl.resolver.DefaultResolverProvider;
 import io.vertx.core.spi.resolver.ResolverProvider;
+import sun.misc.Unsafe;
 
 /**
  * This substitution avoid having loggers added to the build
@@ -41,12 +42,11 @@ final class TargetPlatformDependent0 {
 /**
  *  Proof
  */
- @TargetClass(className = "io.netty.util.AbstractReferenceCounted")
+ @TargetClass(className = "io.netty.buffer.AbstractReferenceCountedByteBuf")
 final class Proof {
-  @Substitute
-  private static long objectFieldOffset(java.lang.reflect.Field field) {
-    return 0L;
-  }
+  @Alias
+  @RecomputeFieldValue(kind = RecomputeFieldValue.Kind.FieldOffset, declClassName = "sun.misc.Unsafe", name = "theUnsafe")
+  private static Unsafe UNSAFE_ALIAS;
 }
 
 /**
