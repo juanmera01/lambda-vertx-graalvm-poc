@@ -30,3 +30,8 @@ jobs:
       - name: create heap dump
         run: |
           ./target/lambda -XX:+DumpHeapAndExit
+      - name: Upload heap dump
+        uses: actions/upload-artifact@v2
+        with:
+          name: lambda.hprof
+          path: lambda.hprof
