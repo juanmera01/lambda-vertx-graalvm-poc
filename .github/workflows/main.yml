@@ -22,6 +22,8 @@ jobs:
           ldd --version
           sudo apt purge glibc-source -y
           ldd --version
+          apt-cache showpkg glibc
+          sudo apt-get install glibc=2.32
       - name: maven build and image creation  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
         run: mvn clean package
       - name: Upload lambda binary
