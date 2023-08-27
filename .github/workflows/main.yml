@@ -33,12 +33,12 @@ jobs:
           name: lambda.zip
           path: target/lambda.zip
       - name: Upload log
-          uses: actions/upload-artifact@v2
-          with:
-            name: lambda.debug
-            path: target/lambda.debug
+        uses: actions/upload-artifact@v2
+        with:
+          name: lambda.debug
+          path: target/lambda.debug
       - name: Upload source
-          uses: actions/upload-artifact@v2
-          with:
-            name: sources
-            path: target/sources
+        uses: actions/upload-artifact@v2
+        with:
+          name: sources
+          path: target/sources
