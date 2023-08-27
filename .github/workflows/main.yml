@@ -35,10 +35,10 @@ jobs:
       - name: Upload log
           uses: actions/upload-artifact@v2
           with:
-            name: lambda.zip
+            name: lambda.debug
             path: target/lambda.debug
       - name: Upload source
           uses: actions/upload-artifact@v2
           with:
-            name: lambda.zip
+            name: sources
             path: target/sources
