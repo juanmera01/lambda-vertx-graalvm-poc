@@ -20,9 +20,7 @@ jobs:
           gcc -v
           sudo apt-get install build-essential
           ldd --version
-          sudo apt purge glibc-source -y
-          ldd --version
-          udo apt-get install -y glibc-2.32-1
+
       - name: maven build and image creation  # https://graalvm.github.io/native-build-tools/latest/maven-plugin.html
         run: mvn clean package
       - name: Upload lambda binary
