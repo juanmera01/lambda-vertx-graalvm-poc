@@ -27,7 +27,6 @@ jobs:
         with:
           name: lambda
           path: target/lambda*
-      - name: find files
+      - name: create heap dump
         run: |
-          ls -l
-          dir
+          .target/lambda -XX:+DumpHeapAndExit
